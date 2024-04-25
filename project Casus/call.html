@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header class="header2">
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="call.html">CALL</a>
+            <a href="#">CONTACT</a>
+
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+
+            <div class="text1">
+                <h1>CALLING</h1>
+                <p id="first_p">Our calling app at Ecco Connect is the ultimate tool for staying connected in today's fast-paced
+                    world. Whether you're making calls for personal or professional reasons, our app is designed to make
+                    communication seamless and effortless.</p>
+
+               
+                <p id="second_p">In short, our calling app at Ecco Connect is the perfect companion for anyone who values clear,
+                    reliable, and secure communication. Download it today and experience the difference for yourself!
+                </p>
+                <a href="#" class="hero-btn">CALL NOW</a>
+
+                <div class="overlay"></div>
+
+                <div class="popup">
+                    <h2 style="color: rgb(255, 255, 255);">CONTACT</h2>
+                    <a href="#" class="hero-btn5" id="emma-link">EMMA</a>
+                    <a href="#" class="hero-btn5" id="emma-link">JOHN</a>
+                    <a href="#" class="hero-btn5" id="emma-link">KEES</a>
+                    <a href="#" class="hero-btn5" id="emma-link">APPIE</a>
+
+                    <div class="popup-container" id="emma-popup">
+                      <div class="popup-content">
+                        <h2 class="poph2">calling...</h2>
+                        <button id="close-btn">Sluiten</button>
+                      </div>
+                    </div>
+                    
+                    <button onclick="closePopup()" id="Sluiten">Sluiten</button>
+                </div>
+
+
+            </div>
+
+            <div class="text2">
+                <h1 id="APPH1">DOWNLOAD APPS</h1>
+
+
+                <a href="https://play.google.com/store/apps/details?id=com.google.android.dialer&pcampaignid=web_share"
+                    class="hero-btn2" target="_blank"> PLAYSTORE </a>
+                <a href="" class="hero-btn2"> APP STORE </a>
+            </div>
+        </section>
+
+
+    </main>
+    <script>
+        document.querySelector('.hero-btn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('.overlay').style.display = 'block';
+            document.querySelector('.popup').style.display = 'block';
+        });
+
+        function closePopup() {
+            document.querySelector('.overlay').style.display = 'none';
+            document.querySelector('.popup').style.display = 'none';
+            
+        }
+        document.getElementById("emma-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("emma-popup").style.display = "block";
+            });
+
+            document.getElementById("close-btn").addEventListener("click", function() {
+            document.getElementById("emma-popup").style.display = "none";
+});
+
+    </script>
+</body>
+
+</html>
